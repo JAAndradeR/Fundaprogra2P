@@ -38,7 +38,7 @@ void main() {
   print("La suma de los valores es: $s"); }
   //for
   ```
-### Ejercicio 1.1 (while) Sumar los valores del 1 al 10
+### Ejercicio 1.1 Sumar los valores del 1 al 10 (while)
 #### Analisis 1.1.2 
 Se asigna una variable que inicia en 0 "s" y otra que inice en 1 "c" luego con una se asigna la condicion de termino y en la otra se almacena la suma.
 #### 1.1.3 Diagrama de flujo de datos
@@ -74,7 +74,7 @@ void main(List<String> args) {
   print("El resultado de la suma de los valores es:$s");
 } //while
  ```
- ### Ejercicio 1.2 Suma de los numeros del 1 al 10
+ ### Ejercicio 1.2 Suma de los numeros del 1 al 10 (Do while)
  #### 1.2.1 Analisis 
  Se asignan dos variables Suma y Cont inicializadas en 0 y 1 respectivamente, luego se inicia el proceso donde se le suman a las variables cont y +1 respectivamente, hasta que la condicion encontrada al final se cumpla
  #### 1.2.2 Diagrama de flujo de datos 
@@ -108,7 +108,7 @@ void main(List<String> args) {
   print("El resultado de la suma de los valores es:$s");
 }
 ```
-### 2 Ejercicio Obtenga la suma de los 5 primeros numeros pares 
+### 2 Ejercicio Obtenga la suma de los 5 primeros numeros pares (for)
 #### 2.1 Analisis 
 Se crea un contador del 1 al 5 y en una variable se acumula el contador multiplicado por 2 por cada numero del 1 al 5
 #### 2.2 Diagrama de flujo de datos
@@ -137,7 +137,7 @@ void main(List<String> args) {
   print("resultado de la suma de numeros pares es:$s");
 }
 ```
-#### 2.1.1 Ejercicio Obtenga la suma de los 5 primeros numeros pares 
+#### 2.1.1 Ejercicio Obtenga la suma de los 5 primeros numeros pares (While)
 #### 2.1.2 Analisis
 Se asigna una variable que inicia en 0 "s" y otra que inice en 1 "c" luego con una se asigna la condicion de termino y en la otra se almacena la suma del contador multiplicado por 2.
 #### 2.1.3 Diagrama de flujo de datos 
@@ -149,12 +149,12 @@ Se asigna una variable que inicia en 0 "s" y otra que inice en 1 "c" luego con u
 |2|2|2<=5|2+ 2 * 2|2+1||
 |6|3|3<=5|6+ 3 * 2|3+1||
 |12|4|4<=5|12+ 4 * 2|4+1||
-|20|5|5<=5|20+ 5 * 2|5+1|30|
+|20|5|5<=5|20+ 5 * 2|5+1|3|
 #### 2.1.5 Entradas
 Ninguna
 #### 2.1.6 Salidas 
 30
-#### Codigo 
+#### 2.1.7 Codigo 
 ```
 void main(List<String> args) {
   int s = 0, c = 1;
@@ -165,6 +165,23 @@ void main(List<String> args) {
   print("resultado de la suma de numeros pares:$s");
 } //While
 ```
+### Ejercicio 2.2.1 
+#### 2.2.3 Analisis
+Se crean dos variables con, sum y son iniciadas en 0, para despues crear sumarle 1 a con y a sum le agregamos con
+hasta que la condicion que se encuentra al final se cumpla
+#### 2.2.4 Diagrama de flujo de datos 
+![Sumapardowhile](https://user-images.githubusercontent.com/113397997/198417061-fb07bc48-4878-432a-aa5c-5da60070d035.png)
+DFD
+#### 2.2.5 Prueba de escritorio 
+|Sun|Con|Con<=5|pantalla|
+|-|-|-|-|
+|2|1|1<=5|  |
+|6|2|2<=5|  |
+|12|3|3<=5| |
+|20|4|4<=5| |
+|30|5|5<=5|30|
+
+
 
 
 

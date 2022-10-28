@@ -42,7 +42,7 @@ void main() {
 #### Analisis 1.1.2 
 Se asigna una variable que inicia en 0 "s" y otra que inice en 1 "c" luego con una se asigna la condicion de termino y en la otra se almacena la suma.
 #### 1.1.3 Diagrama de flujo de datos
-![SumaWhile](https://user-images.githubusercontent.com/113397997/197900095-36784cca-3425-44a8-99ca-456e451b34fa.png)
+![SumaWhile](https://user-images.githubusercontent.com/113397997/198421393-eae5b96a-3afb-4428-b267-5a8b45f820e3.png)
 ####DFD
 #### 1.1.4 Prueba de Escritorio 
 |Suma|Cont|Cont<=10|Suma=Suma+Cont|Cont=Cont++|Salida|
@@ -78,7 +78,7 @@ void main(List<String> args) {
  #### 1.2.1 Analisis 
  Se asignan dos variables Suma y Cont inicializadas en 0 y 1 respectivamente, luego se inicia el proceso donde se le suman a las variables cont y +1 respectivamente, hasta que la condicion encontrada al final se cumpla
  #### 1.2.2 Diagrama de flujo de datos 
- ![SumaDowhile](https://user-images.githubusercontent.com/113397997/197901109-a075bfe3-cabd-4842-91f1-83f1054474b8.png)
+![SumaDoWhile](https://user-images.githubusercontent.com/113397997/198421584-c05dce79-f7d8-4cdc-bc7b-92fe6e59fa16.png)
  ####DFD
  #### 1.2.3 Prueba de escritorio 
 |Suma|Cont|Suma=Suma+Cont|Cont=Cont++|Cont<=10|Salida|
@@ -141,7 +141,7 @@ void main(List<String> args) {
 #### 2.1.2 Analisis
 Se asigna una variable que inicia en 0 "s" y otra que inice en 1 "c" luego con una se asigna la condicion de termino y en la otra se almacena la suma del contador multiplicado por 2.
 #### 2.1.3 Diagrama de flujo de datos 
-![Sumaparwhile](https://user-images.githubusercontent.com/113397997/197905652-656ce027-0a6a-4902-b29f-b378723ab119.png)
+![SumaParWhile](https://user-images.githubusercontent.com/113397997/198422269-276c7021-6c66-481c-b077-5c7321456f1f.png)
 #### 2.1.4 Prueba de escritorio 
 |s|c|c<=5|s=s+ i * 2|c++|salida|
 |-|-|-|-|-|-|
@@ -156,7 +156,7 @@ Ninguna
 30
 #### 2.1.7 Codigo 
 ```
-void main(List<String> args) {
+void main() {
   int s = 0, c = 1;
   while (c <= 5) {
     s = s + c * 2;
@@ -165,7 +165,7 @@ void main(List<String> args) {
   print("resultado de la suma de numeros pares:$s");
 } //While
 ```
-### Ejercicio 2.2.1 
+### Ejercicio 2.2.1 Suma los primeros 5 numeros pares
 #### 2.2.3 Analisis
 Se crean dos variables con, sum y son iniciadas en 0, para despues crear sumarle 1 a con y a sum le agregamos con
 hasta que la condicion que se encuentra al final se cumpla
@@ -180,6 +180,122 @@ DFD
 |12|3|3<=5| |
 |20|4|4<=5| |
 |30|5|5<=5|30|
+#### 2.2.6 Codigo
+```
+void main() {
+  int s = 0, c = 1;
+
+  do {
+    s = s + c * 2;
+    c = c + 1;
+  } while (c <= 5);
+  print("La suma de tus pares es:$s");
+} //Do While
+```
+#### 2.2.7 Entradas
+Ninguna
+#### 2.2.8 
+30
+### Ejercicio 3 (for)
+Almacene en un array el numero n leido del teclado 
+#### 3.1 Analisis
+Usando una lista se generan diez numeros 0, luego usando un ciclo for se recorren todas las posiciones de la lista
+Se usa una entrada de teclado simple convirtiendo un String a Int y luego verificando que la entrada no sea null para luego asignarla a la posicion que genera el for.
+#### 3.2 Diagrama de flujo de datos 
+![SumaparDowhile](https://user-images.githubusercontent.com/113397997/198422521-72bae51f-eb4d-474e-bcdd-cd10619468b8.png)
+DFD
+#### 3.3 Prueba de escritorio 
+|N|i|A[i]|A|
+|-|-|-|-|
+|4|0|A[0]||
+|5|1|A[1]||
+|7|2|A[2]||
+|5|3|A[3]||
+|5|4|A[4]||
+|3|5|A[5]||
+|3|6|A[6]||
+|5|7|A[7]||
+|1|8|A[8]||
+|-8|9|A[9]|4,5,7,55,3,3,5,1,-8|
+#### 3.4 Codigo 
+```
+import 'dart:io';
+
+//Leer 10 numeros del teclado y ponerlos en una lista.
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  for (var i = 0; i <= 9; i++) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+    }
+  }
+  stdout.write("aqui esta la lista, $arra");
+}
+``` 
+#### 3.5 Entradas 
+4,5,7,5,5,3,3,5,1,-8
+#### 3.6 Salidas 
+4,5,7,5,5,3,3,5,1,-8
+### 3.1.1 Ejercicio 
+Almacene en un array el numero n leido del teclado (While)
+#### 3.1.2 Analisis 
+Se declara la variable i = 0, luego se entra en un ciclo while donde mientras se cumpla la conidicon i <= 9 el usuario ingresa un numero en el teclado, luego de la primera corrida i aumenta en 1. el ciclo se repite hasta que se tengan los 10 numeros del teclado
+#### 3.1.3 Diagrama de flujo de datos 
+![Array10while](https://user-images.githubusercontent.com/113397997/198423714-6929f933-afbc-4568-a3e8-edf5af4cae37.png)
+DFD
+#### 3.1.4 Prueba de escritorio 
+|n|c|c<=9|A[c]=n|c++|pantalla|
+|-|-|-|-|-|-|
+|9|0|0<=9|A[0]=9|0+1||
+|9|1|1<=9|A[1]=9|1+1||
+|9|2|2<=9|A[2]=9|2+1||
+|9|3|3<=9|A[3]=9|3+1||
+|9|4|4<=9|A[4]=9|4+1||
+|9|5|5<=9|A[5]=9|5+1||
+|9|6|6<=9|A[6]=9|6+1||
+|9|7|7<=9|A[7]=9|7+1||
+|9|8|8<=9|A[8]=9|8+1||
+|9|9|9<=9|A[9]=9|9+1|9,9,9,9,9,9,9,9,9,9|
+#### 3.1.5 Codigo
+```
+import 'dart:io';
+
+//Leer 10 numeros del teclado y ponerlos en una lista.
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  while (i <= 9) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int ner = int.parse(s);
+      arra[i] = ner;
+    }
+    i++;
+  }
+  stdout.write("Tu lista es, $arra ");
+}
+```
+#### 3.1.6 Entradas
+9,9,9,9,9,9,9,9,9,9
+#### 3.1.7 Salidas 
+A[9,9,9,9,9,9,9,9,9,9]
+###  3.2.1 Ejercicio
+Almacene en un array el numero n leido del teclado 
+#### 3.2.2 Analsis
+Se declara una variable i que empieza en 0 
+
+
+
+
+
+
+
 
 
 

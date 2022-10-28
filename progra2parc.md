@@ -288,9 +288,42 @@ A[9,9,9,9,9,9,9,9,9,9]
 ###  3.2.1 Ejercicio
 Almacene en un array el numero n leido del teclado 
 #### 3.2.2 Analsis
-Se declara una variable i que empieza en 0 
+Se abre un array de diez digitos, se declara una variable i que empieza en 0, luego se captura un numero N despues A de la posicion C=0 se declara como N y se agrega +1 a i, despues una condicion nos hace repetir el ciclo y capturar datos mientras c<=9, cuando la condicion se cumple se imprime el array.
+#### 3.2.3 Diagrama de flujo de datos
+![Array10Dowhile](https://user-images.githubusercontent.com/113397997/198505136-b4be42db-6fed-41b3-8fdf-f78f9c5576b5.png)
+#### 3.2.4 Prueba de escritorio 
+|n|i|A[i]=n|i++|i<=9|Pantalla|
+|2|0|0<=9|0+1|A[0]=2||
+|2|1|1<=9|1+1|A[1]=2||
+|2|2|2<=9|2+1|A[2]=2||
+|2|3|3<=9|3+1|A[3]=2||
+|2|4|4<=9|4+1|A[4]=2||
+|2|5|5<=9|5+1|A[5]=2||
+|2|6|6<=9|6+1|A[6]=2||
+|2|7|7<=9|7+1|A[7]=2||
+|2|8|8<=9|8+1|A[8]=2||
+|2|9|9<=9|9+1|A[9]=2|A[2,2,2,2,2,2,2,2,2,2]|
+#### 3.2.5 Codigo
 
+```
+import 'dart:io';
 
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  do {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+      i++;
+    }
+  } while (i <= 9);
+  stdout.write("Tu lista es $arra ");
+}
+```
 
 
 

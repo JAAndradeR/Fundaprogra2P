@@ -545,7 +545,7 @@ void main() {
 #### 6.1 Analisis
 Se ingresan las variables y se validan que esten dentro del rango, luego con un ciclo for se recorren todos lugares del indice y se asignan los valores de las variables para calificaciones y luego se clasifican como aprobatorias o reprobatorias con una condicion que revisa si son menores a 6
 #### 6.2 Diagrama de flujo de datos 
-![CalifFor](https://user-images.githubusercontent.com/113397997/198520130-21e16e13-6a54-4048-a4b5-12bc073268b5.png)
+![fofof](https://user-images.githubusercontent.com/113397997/198523739-10156bab-6d0a-4df6-87a3-0cf4ca2a5431.png)
 6.3 Prueba de escritorio 
 |C_Almn|C_Almn<=14|Cal|Cal>=LI|Cal<=LS|A[i]=Cal|i+1|Cal<5|S_A=S_A+Cal|C_A=C_A+1|C_R++|P_A=S_A/C_A|P_A|C_R|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|-|
@@ -564,7 +564,38 @@ Se ingresan las variables y se validan que esten dentro del rango, luego con un 
 |12|12<=14|10|10>=0|10<=10|A[12]=10|12+1|10<5|75+10|9+1|||||
 |13|13<=14|9|9>=0|9<=10|A[13]=9|13+1|9<5|85+9|10+1|||||
 |14|14<=14|8|8>=0|8<=10|A[14]=8|14+1|8<5|94+8|11+1||P_A=102/12|8.5|3|
+#### 6.4 Codigo 
+```
+alumnos = list(range(15))
+p_aprobados = 0
+j = 0
 
+for i in alumnos: 
+    while(True):
+        calificacion = int(input("Ingresa la calificación >>"))
+        if (calificacion >= 0 and calificacion <= 10):
+            break
+        else:
+            print("Calificación fuera de rango. Intenta de nuevo")
+ 
+    if (calificacion < 6):
+     alumnos[i] = "R"
+    else:
+     p_aprobados = calificacion + p_aprobados
+     j = j + 1
+     alumnos[i] = "A"
+
+print("\033[33;1m",alumnos,"\033[39m")
+print("El promedio de calificación de los aprobados es de >>",round(p_aprobados/j,2))
+print("El total de aprobados fueron >> ",j)
+print("El total de reprobados fueron >> ",(len(alumnos)-j))
+```
+#### 6.5 Entradas 
+7,6,3,9,9,10,5,10,8,7,9,4,10,9,8
+#### 6.6 Salidas 
+El promedio de los aprobados 8.5 y la cantidad de reprobados 3
+### 6.1.1 Ejercicio  Obtener el promedio de las calificaciones aprobatorias y la cantidad de alumnos reprobados. La calificación entre 0 y 10 y el maximo de alumnos es de 15. (While)
+#### 6.1.2 Analisis 
 
 
 
